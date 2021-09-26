@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 100%;
+    padding: 50px;
+    min-height: 100vh;
+    background-color: white;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+h1 {
+    margin: 0;
+}
+.title p {
+    line-height: 1.5;
+}
+.cricle-container {
+    position: fixed;
+    left: -100px;
+    top: -100px;
+}
+
+.container.show-nav .cricle {
+    transform: rotate(-70deg);
+}
+
+.container.show-nav+nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+    /*  */
+}
+
+.cricle {
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.cricle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 35px;
+    color: #fff;
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+button.close {
+    top: 60%;
+    transform: rotate(87deg);
+    transform-origin: top left;
+}
+
+button.open {
+    left: 60%;
+}
+
+img {
+    max-width: 100%;
+}
+
+small {
+    font-family: initial;
+    color: #555;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.title {
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    margin-left: 11px;
+    text-transform: uppercase;
+}
+nav a:hover {
+    font-weight: bold;
+    color: white;
+}
+
+
+
+nav ul li+li {
+    margin-left: 20px;
+    transform: translateX(-150%);
+    
+}
+
+nav ul li+li+li {
+    margin-left: 40px;
+}
+

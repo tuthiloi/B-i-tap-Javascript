@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: inherit;
+    height: 110vh;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    background-color: none;
+    border: 1px solid #9fa4a8;
+    border-radius: 16px;
+    padding: 22px;
+    margin: 20px 0;
+}
+button {
+    background: none;
+    border: none;
+}

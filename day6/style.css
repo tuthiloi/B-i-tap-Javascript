@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 10px;
+}
+
+body {
+    font-family: fangsong;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    overflow-x: hidden;
+    justify-content: center;
+    background-color: white;
+}
+
+.column {
+    background-color: steelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 400px;
+    height: 200px;
+    box-shadow: 10px;
+    margin: 10px;
+    border-radius: 33px;
+    transform: translateX(400%);
+    transition: transform 0.3s ease;
+    box-shadow: 5px 10px 10px rgb(0 0 0 / 17%);
+}
+
+/* odd:Đại diện cho các phần tử có vị trí số trong một chuỗi các phần tử là số lẻ
+even:Đại diện cho các phần tử có vị trí số trong một chuỗi các phần tử là số chẵn */
+.column:nth-last-child(even) {
+    transform: translateX(-400%);
+}
+
+.column.show {
+    transform: translateX(0);
+}
+
+h3 {
+    font-size: 34px;
+}
